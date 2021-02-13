@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import { useStore } from "../store";
 import RenderInput from "../components/RenderInput";
 import FrameworkList from "../components/FrameworkList";
+import UseEffectRender from "../components/UseEffectRender";
 
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <RenderInput outputConsole={outputConsole}></RenderInput>
       <FrameworkList frameworks={data} />
+      <UseEffectRender />
     </Provider>
   );
 }
