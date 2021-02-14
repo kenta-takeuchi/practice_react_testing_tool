@@ -3,6 +3,8 @@ import { useStore } from "../store";
 import RenderInput from "../components/RenderInput";
 import FrameworkList from "../components/FrameworkList";
 import UseEffectRender from "../components/UseEffectRender";
+import MockServer from "../components/MockServer";
+import Redux from "../components/Redux";
 
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -32,6 +34,8 @@ export default function App({ Component, pageProps }) {
       <RenderInput outputConsole={outputConsole}></RenderInput>
       <FrameworkList frameworks={data} />
       <UseEffectRender />
+      <MockServer />
+      <Redux />
     </Provider>
   );
 }
