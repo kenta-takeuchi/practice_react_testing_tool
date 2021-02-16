@@ -5,6 +5,7 @@ import FrameworkList from "../components/FrameworkList";
 import UseEffectRender from "../components/UseEffectRender";
 import MockServer from "../components/MockServer";
 import Redux from "../components/Redux";
+import CustomHooks from "../components/CustomHooks";
 
 export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }) {
       <UseEffectRender />
       <MockServer />
       <Redux />
+      <CustomHooks />
     </Provider>
   );
 }
